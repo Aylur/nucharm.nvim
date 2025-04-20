@@ -1,3 +1,4 @@
+local kinds = require("nucharm.groups.kinds")
 local Util = require("nucharm.util")
 
 local M = {}
@@ -9,7 +10,8 @@ function M.get(c)
 	end
 
 	--- :help highlight-groups
-	return {
+	---@type table<string,vim.api.keyset.highlight|string>
+	local ret = {
 		ColorColumn = { bg = c.neutral[3] }, -- Used for the columns set with 'colorcolumn'.
 		Conceal = { fg = c.red }, -- Placeholder characters substituted for concealed text (see 'conceallevel').
 		CurSearch = { fg = c.red }, -- Used for highlighting a search pattern under the cursor (see 'hlsearch').
@@ -115,6 +117,12 @@ function M.get(c)
 		GitSignsChange = { fg = c.yellow },
 		GitSignsDelete = { fg = c.red },
 	}
+
+	for kind, _ in pairs(kinds.get(c)) do
+		ret["LspKind" .. kind] = kind
+	end
+
+	return ret
 end
 
 return M

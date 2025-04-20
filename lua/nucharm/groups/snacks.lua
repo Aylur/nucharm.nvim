@@ -1,13 +1,7 @@
-local Util = require("nucharm.util")
-
 local M = {}
 
 ---@type fun(c: nucharm.Palette):table<string,vim.api.keyset.highlight|string>
 function M.get(c)
-	local darken = function(color, alpha)
-		return Util.blend(color, alpha, c.neutral[1])
-	end
-
 	--- :help highlight-groups
 	return {
 		SnacksPickerCursorLine = { bg = c.neutral[4] },

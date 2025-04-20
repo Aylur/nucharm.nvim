@@ -17,7 +17,8 @@ M.get = function(palette, opts)
 		require("nucharm.groups.base").get(colors),
 		require("nucharm.groups.treesitter").get(colors),
 		require("nucharm.groups.semantic_tokens").get(colors),
-		require("nucharm.groups.snacks").get(colors)
+		require("nucharm.groups.snacks").get(colors),
+		require("nucharm.groups.blink").get(colors)
 	)
 
 	require("nucharm.groups.terminal").set_terminal_colors(colors)

@@ -1,5 +1,3 @@
-local Util = require("nucharm.util")
-
 local M = {}
 
 ---@type fun(c: nucharm.Palette):table<string,vim.api.keyset.highlight|string>
