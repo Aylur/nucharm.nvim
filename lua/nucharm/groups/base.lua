@@ -64,6 +64,7 @@ function M.get(c)
 		SpellRare = { sp = c.cyan, underline = true }, -- Word that is recognized by the spellchecker as one that is hardly ever used. |spell| Combined with the highlighting used otherwise.
 		StatusLine = { bg = c.neutral[2], fg = c.neutral[8] }, -- Status line of current window.
 		StatusLineNC = { bg = c.neutral[1], fg = c.neutral[7] }, -- Status lines of not-current windows.
+		SnippetTabstop = {}, -- Tabstops in snippets.
 		TabLine = { bg = c.neutral[1], fg = c.neutral[5] }, -- Tab pages line, not active tab page label.
 		TabLineFill = { bg = c.neutral[1] }, -- Tab pages line, where there are no labels.
 		TabLineSel = { bg = c.neutral[1], fg = c.blue }, -- Tab pages line, active tab page label.
