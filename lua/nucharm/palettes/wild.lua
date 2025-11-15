@@ -1,9 +1,9 @@
 ---@class nucharm.Palette
 local palette = {
 	neutral = {
-		"#111111",
-		"#151515",
-		"#232323",
+		"#111115",
+		"#151519",
+		"#222226",
 
 		"#3c3c3c",
 		"#5a5a5a",
