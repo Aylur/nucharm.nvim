@@ -98,11 +98,13 @@ function M.get(c)
 		DiagnosticWarn = { fg = c.orange }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
 		DiagnosticInfo = { fg = c.blue }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
 		DiagnosticHint = { fg = c.cyan }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
+		DiagnosticOk = { fg = c.green }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
 		DiagnosticUnnecessary = { bg = darken(c.orange, 0.2) }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
 		DiagnosticVirtualTextError = { bg = darken(c.red, 0.1), fg = c.red }, -- Used for "Error" diagnostic virtual text
 		DiagnosticVirtualTextWarn = { bg = darken(c.orange, 0.1), fg = c.orange }, -- Used for "Warning" diagnostic virtual text
 		DiagnosticVirtualTextInfo = { bg = darken(c.blue, 0.1), fg = c.blue }, -- Used for "Information" diagnostic virtual text
 		DiagnosticVirtualTextHint = { bg = darken(c.cyan, 0.1), fg = c.cyan }, -- Used for "Hint" diagnostic virtual text
+		DiagnosticVirtualTextOk = { bg = darken(c.green, 0.1), fg = c.green }, -- Used for "Hint" diagnostic virtual text
 		DiagnosticUnderlineError = { undercurl = true, sp = c.red }, -- Used to underline "Error" diagnostics
 		DiagnosticUnderlineWarn = { undercurl = true, sp = c.orange }, -- Used to underline "Warning" diagnostics
 		DiagnosticUnderlineInfo = { undercurl = true, sp = c.blue }, -- Used to underline "Information" diagnostics
