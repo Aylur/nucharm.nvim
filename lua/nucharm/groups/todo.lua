@@ -21,6 +21,8 @@ function M.get(c)
 		TodoFgTODO = { fg = darken(c.blue, 0.7) },
 		TodoBgWARN = { bold = true, bg = darken(c.orange, 0.2), fg = c.orange },
 		TodoFgWARN = { fg = darken(c.orange, 0.7) },
+		TodoBgPERF = { bold = true, bg = darken(c.magenta, 0.2), fg = c.magenta },
+		TodoFgPERF = { fg = darken(c.magenta, 0.7) },
 	}
 end
 
