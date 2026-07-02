@@ -25,7 +25,7 @@ function M.get(c)
 		["@string.special"] = { fg = c.cyan }, -- other special strings (e.g. dates)
 		["@string.special.url"] = { fg = c.magenta, underline = true }, -- URIs (e.g. hyperlinks)
 
-		["@character"] = { fg = c.cyan }, -- character literals
+		["@character"] = "Character", -- character literals
 		-- ["@character.special"] = {}, -- special characters (e.g. wildcards)
 		--
 		["@boolean"] = "Boolean", -- boolean literals
@@ -36,14 +36,14 @@ function M.get(c)
 		["@type.builtin"] = "@type", -- built-in types
 		["@type.definition"] = { fg = c.magenta }, -- identifiers in type definitions (e.g. `typedef <type> <identifier>` in C)
 		--
-		["@attribute"] = { fg = c.blue }, -- attribute annotations (e.g. Python decorators, Rust lifetimes)
+		["@attribute"] = "Function", -- attribute annotations (e.g. Python decorators, Rust lifetimes)
 		["@attribute.builtin"] = "@attribute", -- builtin annotations (e.g. `@property` in Python)
 		["@property"] = "Field", -- the key in key/value pairs
 
-		["@function"] = { fg = c.blue }, -- function definitions
+		["@function"] = "Function", -- function definitions
 		["@function.builtin"] = "@function", -- built-in functions
 		["@function.call"] = "@function", -- function calls
-		["@function.macro"] = { fg = c.magenta }, -- preprocessor macros
+		["@function.macro"] = "PreProc", -- preprocessor macros
 
 		["@function.method"] = "Field", -- method definitions
 		["@function.method.call"] = "@funciton.method", -- method calls
@@ -54,24 +54,24 @@ function M.get(c)
 		["@keyword"] = "Keyword", -- keywords not fitting into specific categories
 		["@keyword.coroutine"] = "@keyword", -- keywords related to coroutines (e.g. `go` in Go, `async/await` in Python)
 		["@keyword.function"] = "@keyword", -- keywords that define a function (e.g. `func` in Go, `def` in Python)
-		["@keyword.operator"] = { fg = c.cyan }, -- operators that are English words (e.g. `and`, `or`)
+		["@keyword.operator"] = "Operator", -- operators that are English words (e.g. `and`, `or`)
 		["@keyword.import"] = "@keyword", -- keywords for including modules (e.g. `import`, `from` in Python)
 		["@keyword.type"] = "@keyword", -- keywords defining composite types (e.g. `struct`, `enum`)
 		["@keyword.modifier"] = "@keyword", -- keywords defining type modifiers (e.g. `const`, `static`, `public`)
 		["@keyword.repeat"] = "@keyword", -- keywords related to loops (e.g. `for`, `while`)
 		["@keyword.return"] = "@keyword", -- keywords like `return` and `yield`
-		["@keyword.debug"] = { fg = c.orange }, -- keywords related to debugging
+		["@keyword.debug"] = "Debug", -- keywords related to debugging
 		["@keyword.exception"] = "@keyword", -- keywords related to exceptions (e.g. `throw`, `catch`)
 
 		["@keyword.conditional"] = "@keyword", -- keywords related to conditionals (e.g. `if`, `else`)
 		["@keyword.conditional.ternary"] = "Operator", -- ternary operator (e.g. `?`, `:`)
 
-		["@keyword.directive"] = { fg = c.pink }, -- various preprocessor directives and shebangs
-		["@keyword.directive.define"] = { fg = c.pink }, -- preprocessor definition directives
+		["@keyword.directive"] = "Special", -- various preprocessor directives and shebangs
+		["@keyword.directive.define"] = "Special", -- preprocessor definition directives
 
 		["@punctuation.delimiter"] = { fg = c.neutral[7] }, -- delimiters (e.g. `;`, `.`, `,`)
 		["@punctuation.bracket"] = { fg = c.neutral[7] }, -- brackets (e.g. `()`, `{}`, `[]`)
-		["@punctuation.special"] = { fg = c.pink }, -- special symbols (e.g. `{}` in string interpolation)
+		["@punctuation.special"] = "Special", -- special symbols (e.g. `{}` in string interpolation)
 
 		["@comment"] = "Comment", -- line and block comments
 		["@comment.documentation"] = "Comment", -- comments documenting code

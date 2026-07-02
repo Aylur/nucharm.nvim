@@ -1,12 +1,12 @@
 local kinds = require("nucharm.groups.kinds")
-local Util = require("nucharm.util")
+local colors = require("nucharm.colors")
 
 local M = {}
 
 ---@type fun(c: nucharm.Palette):table<string,vim.api.keyset.highlight|string>
 function M.get(c)
 	local darken = function(color, alpha)
-		return Util.blend(color, alpha, c.neutral[1])
+		return colors.blend(color, alpha, c.neutral[1])
 	end
 
 	--- :help highlight-groups
